@@ -9,6 +9,7 @@ class Student {
 	String studentUsername
 	String studentPassword
 	String course
+	Course courseEnrolled
 
     static constraints = {
 	studentName nullable:false, blank: false
@@ -20,4 +21,6 @@ class Student {
 	isFundingAvailable nullable:false, blank: false
 	course nullable:false, blank: false 
     }
+
+	static belongsTo = [course:Course]
 }
